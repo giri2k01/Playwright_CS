@@ -1,5 +1,7 @@
 let {test,expect}=require('@playwright/test')  
-//import {test,expect} from '@playwright/test'     //importing test & exepct from playwright/test
+/*import {test,expect} from '@playwright/test'     //importing test & exepct from playwright/test
+const playwrightTest = require('@playwright/test');
+console.log(playwrightTest);*/
 
 test('Home page', async ({ page }) =>{                    //makes a program return a promise //Home page is the name of the test // {}=> is the declaration of ananiomus function //page is a fixture
  await page.goto('https://letcode.in')                 //makes the func wait for the promise(wait until the page is loaded)
@@ -16,6 +18,7 @@ for(const field of fields ){
     const res = await field.textContent()
     console.log(res)
 }
+await page.goto('https://letcode.in')  
  
  //var pagetitle = page.title();
  //console.log('pagetitle:',pagetitle );
