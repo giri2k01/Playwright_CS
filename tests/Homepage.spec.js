@@ -10,7 +10,7 @@ test('Home page', async ({ page }) =>{                    //makes a program retu
  await page.locator('a[href="/edit"]').click();
  const pagename = await page.locator('//h1[contains(text(),"Input")]')
  await expect(pagename).toBeVisible()
- await page.fill('xpath=//*[@id="fullName"]','Giri')
+ await page.fill('xpath=//*[@id="fullName"]','Giridharan')
  const fields = await page.$$('xpath=//div[@class="field"]')
 //await page.fill('xpath=//*[@id="fullName"]', 'Giri');  // Using XPath with page.fill
 //const fields = await page.$$('xpath=//div[@class="field"]');  // Using XPath with page.$$
